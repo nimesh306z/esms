@@ -4,9 +4,6 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const apiConfig = require("../config/api.config.js");
 
-const sql = require("./db.js");
-const axios = require("axios");
-const apiConfig = require("../config/api.config.js");
 
 // Constructor
 const SMS = function (sms) {
