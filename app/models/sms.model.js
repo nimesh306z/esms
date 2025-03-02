@@ -33,7 +33,7 @@ SMS.insertAndSend = async (newSMS, result) => {
     // Get the next transaction ID
     const transactionResult = await new Promise((resolve, reject) => {
       sql.query(
-        `SELECT COALESCE(MAX(transactionID) + 1, 800) AS maxTransactionID FROM transaction WHERE DATE(created) = CURDATE();`,
+        `SELECT COALESCE(MAX(transactionID) + 1, 1600) AS maxTransactionID FROM transaction WHERE DATE(created) = CURDATE();`,
         (err, res) => {
           if (err) {
             console.log("error: ", err);
